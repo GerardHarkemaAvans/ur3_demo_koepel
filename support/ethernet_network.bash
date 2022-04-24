@@ -1,0 +1,5 @@
+#!/bin/bash
+export ROS_MASTER=192.254.200.200
+export ROS_MASTER_URI=http://$ROS_MASTER:11311
+export ROS_IP=192.168.0.120
+

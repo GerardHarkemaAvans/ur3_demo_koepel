@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<launch>
+
+  <arg name="sim" default="false"/>
+
+  <!-- startup ros_control for real robot -->
+  <group unless="$(arg sim)">
+    <include file="$(find my_universal_robot_controllers)/launch/ur3_control.launch"/>
+	  <!-- Run Rviz and load the default config to see the state of the move_group node -->
+		<include file="$(find my_ur3_moveit_config)/launch/moveit_rviz.launch">
+			<arg name="rviz_config" value="$(find my_ur3_moveit_config)/launch/moveit.rviz"/>
+		</include>
+  </group>
+
+  <!-- startup simulated (rviz)world and spawn robot-->
+  <group if="$(arg sim)">
+    <include file="$(find my_ur3_moveit_config)/launch/demo.launch"/>
+  </group>
+  <node pkg="tf2_ros" type="static_transform_publisher" name="test_broadcaster" args="0.15 0.12 0.10 0 0 0 1 world ik_testpoint" />
+
+</launch>

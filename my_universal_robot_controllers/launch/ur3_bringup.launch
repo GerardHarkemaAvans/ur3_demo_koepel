@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="debug" default="false" doc="Debug flag that will get passed on to ur_common.launch"/>
+  <arg name="robot_ip" default="192.168.10.124" doc="IP address by which the robot can be reached."/>
+  <arg name="robot_description_file" default="$(find my_ur_description)/launch/load_ur3_robot.launch" doc="Robot description launch file."/>
+
+  <include file="$(find ur_robot_driver)/launch/ur3_bringup.launch" pass_all_args="true">
+    <arg name="use_tool_communication" value="false"/>
+  </include>
+</launch>

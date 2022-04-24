@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="ur3_robot">
+
+  <xacro:include filename="$(find ur_description)/urdf/inc/ur3_macro.xacro"/>
+
+  <!-- bracket/beugel -->
+  <xacro:include filename="$(find urdf_support)/beugel/urdf/Beugel.urdf.xacro" />
+  <xacro:beugel/>
+
+  <xacro:include filename="$(find urdf_support)/avans_vacuum_gripper/urdf/avans_vacuum_gripper.xacro" />
+
+  <!-- camera -->
+  <xacro:include filename="$(find realsense2_description)/urdf/_d435.urdf.xacro" />
+
+
+  <xacro:ur3_robot
+    prefix = ""
+    joint_limits_parameters_file='$(find my_ur_description)/urdf/ur3/joint_limits.yaml'
+    kinematics_parameters_file='$(find ur_description)/config/ur3/default_kinematics.yaml'
+    physical_parameters_file='$(find ur_description)/config/ur3/physical_parameters.yaml'
+    visual_parameters_file='$(find ur_description)/config/ur3/visual_parameters.yaml'
+    transmission_hw_interface='hardware_interface/PositionJointInterface'
+    safety_limits='false'
+    safety_pos_margin='0.15'
+    safety_k_position='20'/>
+
+  <material name="LightGrey">
+      <color rgba="0.7 0.7 0.7 1.0" />
+  </material>
+
+  <material name="blue">
+      <color rgba="0 0 0.8 1" />
+  </material>
+
+  <material name="red">
+      <color rgba="0.8 0 0 1" />
+  </material>
+
+
+  <xacro:macro name="cylinder_inertia" params="m r h">
+        <inertia  ixx="${m*(3*r*r+h*h)/12}" ixy = "0" ixz = "0"
+                    iyy="${m*(3*r*r+h*h)/12}" iyz = "0"
+                    izz="${m*r*r/2}" />
+  </xacro:macro>
+
+  <xacro:macro name="box_inertia" params="m x y z">
+          <inertia  ixx="${m*(y*y+z*z)/12}" ixy = "0" ixz = "0"
+                    iyy="${m*(x*x+z*z)/12}" iyz = "0"
+                    izz="${m*(x*x+z*z)/12}" />
+  </xacro:macro>
+
+  <xacro:macro name="sphere_inertia" params="m r">
+          <inertia  ixx="${2*m*r*r/5}" ixy = "0" ixz = "0"
+                    iyy="${2*m*r*r/5}" iyz = "0"
+                    izz="${2*m*r*r/5}" />
+  </xacro:macro>
+
+
+  <link name="world" />
+  <link name="baseplate_link">
+    <visual>
+      <origin xyz="0 0 0.0" />
+      <geometry>
+        <box size="0.7 1.1 0.03" />
+      </geometry>
+      <material name="LightGrey"/>
+    </visual>
+    <inertial>
+      <mass value="10"/>
+      <xacro:box_inertia m="10" x="1.1" y="0.7" z="0.03"/>
+    </inertial>
+  </link>
+
+  <joint name="baseplate_joint" type="fixed">
+    <origin xyz="0 0 0" />
+    <parent link="world" />
+    <child link="baseplate_link" />
+  </joint>
+
+  <link name="mountingplate_link">
+    <visual>
+      <origin xyz="0 0 0.0" />
+      <geometry>
+        <box size="0.3 0.3 0.012" />
+      </geometry>
+      <material name="red"/>
+    </visual>
+    <inertial>
+      <mass value="1"/>
+      <xacro:box_inertia m="1" x="0.3" y="0.3" z="0.012"/>
+    </inertial>
+  </link>
+
+  <joint name="mountingplate_joint" type="fixed">
+    <origin xyz="-0.2 0.0 0.021" />
+    <parent link="baseplate_link" />
+    <child link="mountingplate_link" />
+  </joint>
+
+  <!-- robot to mouting_plate. -->
+  <joint name="mountingplate_link" type="fixed">
+    <parent link="mountingplate_link" />
+    <child link="base_link" />
+    <origin xyz="0.0 0.0 0.01" rpy="0.0 0.0 ${pi}"/>
+  </joint>
+
+  <!-- tool center point -->
+  <link name="tcp_link" />
+  <joint name="tool0_link" type="fixed">
+    <parent link="tool0" />
+    <child link="tcp_link" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 ${-pi/2} 0.0"/>
+  </joint>
+
+  <link name="beugel_base_position"/>
+  <!-- tool0 to beugel_base_position -->
+  <!-- cahnge these valuse to place the beugel on the right position -->
+  <joint name="beugel_base_position_to_tool0" type="fixed">
+    <parent link="tool0" />
+    <child link="beugel_base_position" />
+    <origin xyz="0.0 0.00 0.009" rpy="${pi/2} 0 ${pi}"/> <!-- deze waardes zijn ook nogniet geheel juist-->
+  </joint>
+
+  <joint name="beugel_link_to_beugel_base_position" type="fixed">
+    <parent link="beugel_base_position" />
+    <child link="beugel_link" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+
+  <link name="beugel_camera_position"/>
+  <!-- beugel_base_position to beugel_camera_position -->
+  <joint name="beugel_to_beugel_base_position" type="fixed">
+    <parent link="beugel_link" />
+    <child link="beugel_camera_position" />
+    <origin xyz="0.0 -0.0049 0.0507" rpy="3.14 ${pi/6+3.14} -${pi/2}"/>
+  </joint>
+
+ <link name="camera_mouniting_holes"/>
+ <joint name="camera_mouniting_holes_to_beugel_camera_position" type="fixed">
+    <parent link="beugel_camera_position" />
+    <child link="camera_mouniting_holes" />
+    <origin xyz="-0.006 0.0 -0.006" rpy="0.0 0.0 0"/> <!-- deze waardes zijn nog niet geheel juist, natrekken bij mechanische tekeningen camera-->
+ </joint>
+
+  <!-- camera_to robot -->
+  <xacro:sensor_d435 parent="camera_mouniting_holes" use_nominal_extrinsics="true">
+    <origin xyz="0.0 0 0" rpy="0.0 0 0"/>
+  </xacro:sensor_d435>
+
+  <xacro:vacuum_tool prefix="" connected_to="tool0"/>
+
+</robot>
