@@ -1,6 +1,10 @@
 controller_list:
-  - name: fake_arm_controller
-    type: $(arg execution_type)
+  - name: fake_endeffector_controller
+    type: $(arg fake_execution_type)
+    joints:
+      []
+  - name: fake_Arm_controller
+    type: $(arg fake_execution_type)
     joints:
       - shoulder_pan_joint
       - shoulder_lift_joint
@@ -8,10 +12,6 @@ controller_list:
       - wrist_1_joint
       - wrist_2_joint
       - wrist_3_joint
-  - name: fake_endeffector_controller
-    type: $(arg execution_type)
-    joints:
-      []
 initial:  # Define initial robot poses.
-  - group: arm
+  - group: Arm
     pose: home

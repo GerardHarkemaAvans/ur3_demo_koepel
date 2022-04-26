@@ -15,7 +15,7 @@
   <arg name="load_robot_description" default="true"/>
 
   <!-- Set execution mode for fake execution controllers -->
-  <arg name="execution_type" default="interpolate" />
+  <arg name="fake_execution_type" default="interpolate" />
 
   <!--
   By default, hide joint_state_publisher's GUI
@@ -46,6 +46,7 @@
   <include file="$(find my_ur3_moveit_config)/launch/move_group.launch">
     <arg name="allow_trajectory_execution" value="true"/>
     <arg name="fake_execution" value="true"/>
+    <arg name="fake_execution_type" value="$(arg fake_execution_type)" />
     <arg name="info" value="true"/>
     <arg name="debug" value="$(arg debug)"/>
     <arg name="pipeline" value="$(arg pipeline)"/>

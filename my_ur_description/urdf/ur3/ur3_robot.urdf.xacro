@@ -109,7 +109,7 @@
   <joint name="tool0_link" type="fixed">
     <parent link="tool0" />
     <child link="tcp_link" />
-    <origin xyz="0.0 0.0 0.0" rpy="0.0 ${-pi/2} 0.0"/>
+    <origin xyz="0.0 0.0 0.08" rpy="0.0 ${-pi/2} 0.0"/>
   </joint>
 
   <link name="beugel_base_position"/>
@@ -132,7 +132,11 @@
   <joint name="beugel_to_beugel_base_position" type="fixed">
     <parent link="beugel_link" />
     <child link="beugel_camera_position" />
+    <!--
     <origin xyz="0.0 -0.0049 0.0507" rpy="3.14 ${pi/6+3.14} -${pi/2}"/>
+    -->
+    <origin xyz="0.0 -0.0049 0.0507" rpy="0.0 ${pi/6} -${pi/2}"/>
+
   </joint>
 
  <link name="camera_mouniting_holes"/>
@@ -147,6 +151,13 @@
     <origin xyz="0.0 0 0" rpy="0.0 0 0"/>
   </xacro:sensor_d435>
 
-  <xacro:vacuum_tool prefix="" connected_to="tool0"/>
+  <link name = "gripper_base_link"/>
+
+  <joint name="beugel_to_gripper" type ="fixed">
+      <parent link="tool0" />
+      <child link="gripper_base_link" />
+      <origin xyz="0.0 0.0 0.003" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <xacro:vacuum_tool prefix="" connected_to="gripper_base_link"/>
 
 </robot>

@@ -3,7 +3,10 @@ Panels:
     Help Height: 84
     Name: Displays
     Property Tree Widget:
-      Expanded: ~
+      Expanded:
+        - /MotionPlanning1
+        - /TF1
+        - /TF1/Frames1
       Splitter Ratio: 0.7425600290298462
     Tree Height: 389
   - Class: rviz/Help
@@ -89,6 +92,64 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
+          beugel_base_position:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          beugel_camera_position:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          beugel_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          camera_bottom_screw_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_color_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_color_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_depth_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_depth_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_infra1_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_infra1_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_infra2_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_infra2_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          camera_mouniting_holes:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
           flange:
             Alpha: 1
             Show Axes: false
@@ -98,6 +159,10 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
+          gripper_base_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
           mountingplate_link:
             Alpha: 1
             Show Axes: false
@@ -108,6 +173,10 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
+          tcp:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
           tcp_link:
             Alpha: 1
             Show Axes: false
@@ -117,6 +186,11 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
           upper_arm_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          vacuum_tool:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -203,6 +277,64 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
+          beugel_base_position:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          beugel_camera_position:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          beugel_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          camera_bottom_screw_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_color_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_color_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_depth_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_depth_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_infra1_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_infra1_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_infra2_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_infra2_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          camera_mouniting_holes:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
           flange:
             Alpha: 1
             Show Axes: false
@@ -212,6 +344,10 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
+          gripper_base_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
           mountingplate_link:
             Alpha: 1
             Show Axes: false
@@ -222,6 +358,10 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
+          tcp:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
           tcp_link:
             Alpha: 1
             Show Axes: false
@@ -231,6 +371,11 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
           upper_arm_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          vacuum_tool:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -272,21 +417,53 @@ Visualization Manager:
           Value: false
         baseplate_link:
           Value: false
+        beugel_base_position:
+          Value: false
+        beugel_camera_position:
+          Value: false
+        beugel_link:
+          Value: false
+        camera_bottom_screw_frame:
+          Value: false
+        camera_color_frame:
+          Value: false
+        camera_color_optical_frame:
+          Value: false
+        camera_depth_frame:
+          Value: false
+        camera_depth_optical_frame:
+          Value: false
+        camera_infra1_frame:
+          Value: false
+        camera_infra1_optical_frame:
+          Value: false
+        camera_infra2_frame:
+          Value: false
+        camera_infra2_optical_frame:
+          Value: false
+        camera_link:
+          Value: false
+        camera_mouniting_holes:
+          Value: false
         flange:
           Value: false
         forearm_link:
           Value: false
-        ik_testpoint:
-          Value: true
+        gripper_base_link:
+          Value: false
         mountingplate_link:
           Value: false
         shoulder_link:
+          Value: false
+        tcp:
           Value: false
         tcp_link:
           Value: true
         tool0:
           Value: false
         upper_arm_link:
+          Value: false
+        vacuum_tool:
           Value: false
         world:
           Value: false
@@ -317,10 +494,30 @@ Visualization Manager:
                             wrist_3_link:
                               flange:
                                 tool0:
+                                  beugel_base_position:
+                                    beugel_link:
+                                      beugel_camera_position:
+                                        camera_mouniting_holes:
+                                          camera_bottom_screw_frame:
+                                            camera_link:
+                                              camera_color_frame:
+                                                camera_color_optical_frame:
+                                                  {}
+                                              camera_depth_frame:
+                                                camera_depth_optical_frame:
+                                                  {}
+                                              camera_infra1_frame:
+                                                camera_infra1_optical_frame:
+                                                  {}
+                                              camera_infra2_frame:
+                                                camera_infra2_optical_frame:
+                                                  {}
+                                  gripper_base_link:
+                                    vacuum_tool:
+                                      tcp:
+                                        {}
                                   tcp_link:
                                     {}
-          ik_testpoint:
-            {}
       Update Interval: 0
       Value: true
   Enabled: true
@@ -339,7 +536,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 2.996500015258789
+      Distance: 1.4495453834533691
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -354,10 +551,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.32479703426361084
+      Pitch: -0.09520284831523895
       Target Frame: world
       Value: XYOrbit (rviz)
-      Yaw: 5.464955806732178
+      Yaw: 5.934971809387207
     Saved: ~
 Window Geometry:
   Displays:
