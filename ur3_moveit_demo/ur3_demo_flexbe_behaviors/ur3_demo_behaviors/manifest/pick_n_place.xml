@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<behavior name="pick_n_place">
+
+	<executable package_path="ur3_demo_behaviors.pick_n_place_sm" class="pick_n_placeSM" />
+	<tagstring></tagstring>
+	<author>Gerard Harkema</author>
+	<date>December 12, 2021</date>
+	<description>
+		Demo of a behavior using moveit for the open-manipulator robot
+	</description>
+
+
+	<!-- Contained Behaviors -->
+	<contains name="behaivior_go_to_object" />
+
+	<!-- Available Parameters -->
+
+</behavior>

@@ -4,10 +4,10 @@
   <xacro:include filename="$(find ur_description)/urdf/inc/ur3_macro.xacro"/>
 
   <!-- bracket/beugel -->
-  <xacro:include filename="$(find urdf_support)/beugel/urdf/Beugel.urdf.xacro" />
+  <xacro:include filename="$(find pcl_urdf_support)/beugel/urdf/Beugel.urdf.xacro" />
   <xacro:beugel/>
 
-  <xacro:include filename="$(find urdf_support)/avans_vacuum_gripper/urdf/avans_vacuum_gripper.xacro" />
+  <xacro:include filename="$(find avans_vacuum_gripper_urdf_support)/avans_vacuum_gripper/urdf/avans_vacuum_gripper.xacro" />
 
   <!-- camera -->
   <xacro:include filename="$(find realsense2_description)/urdf/_d435.urdf.xacro" />
@@ -132,10 +132,10 @@
   <joint name="beugel_to_beugel_base_position" type="fixed">
     <parent link="beugel_link" />
     <child link="beugel_camera_position" />
-    <!--
     <origin xyz="0.0 -0.0049 0.0507" rpy="3.14 ${pi/6+3.14} -${pi/2}"/>
-    -->
+    <!--
     <origin xyz="0.0 -0.0049 0.0507" rpy="0.0 ${pi/6} -${pi/2}"/>
+  -->
 
   </joint>
 

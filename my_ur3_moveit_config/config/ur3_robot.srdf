@@ -48,6 +48,30 @@
         <joint name="wrist_2_joint" value="1.57" />
         <joint name="wrist_3_joint" value="0" />
     </group_state>
+    <group_state name="photo" group="arm">
+        <joint name="elbow_joint" value="-1.1976" />
+        <joint name="shoulder_lift_joint" value="-2.1348" />
+        <joint name="shoulder_pan_joint" value="-0.8852" />
+        <joint name="wrist_1_joint" value="-0.8505" />
+        <joint name="wrist_2_joint" value="1.57" />
+        <joint name="wrist_3_joint" value="0" />
+    </group_state>
+    <group_state name="drop" group="arm">
+        <joint name="elbow_joint" value="-1.024" />
+        <joint name="shoulder_lift_joint" value="-2.3431" />
+        <joint name="shoulder_pan_joint" value="0.9893" />
+        <joint name="wrist_1_joint" value="-1.3364" />
+        <joint name="wrist_2_joint" value="1.57" />
+        <joint name="wrist_3_joint" value="0" />
+    </group_state>
+    <group_state name="pre_post_pick" group="arm">
+        <joint name="elbow_joint" value="-1.1976" />
+        <joint name="shoulder_lift_joint" value="-2.1348" />
+        <joint name="shoulder_pan_joint" value="-0.8852" />
+        <joint name="wrist_1_joint" value="-1.4406" />
+        <joint name="wrist_2_joint" value="1.6141" />
+        <joint name="wrist_3_joint" value="0" />
+    </group_state>
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
     <end_effector name="moveit_ee" parent_link="tool0" group="endeffector" />
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
