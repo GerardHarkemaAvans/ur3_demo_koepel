@@ -10,6 +10,13 @@
 		<include file="$(find my_ur3_moveit_config)/launch/moveit_rviz.launch">
 			<arg name="rviz_config" value="$(find my_ur3_moveit_config)/launch/moveit.rviz"/>
 		</include>
+
+    <!-- start ros serial for the gripper -->
+    <node name="serial_node"        pkg="rosserial_python"      type="serial_node.py">
+      <param name="port"              type="string"               value="/dev/ttyACM0"/>
+      <param name="baud"              type="int"                  value="57600"/>
+    </node>
+
   </group>
 
   <!-- start the pointcloud camera -->
@@ -20,16 +27,13 @@
   <!-- start the calculate object pose server -->
   <node name="calculate_object_pose" pkg="pcl_processor" type="pcl_processor" output="screen"/>
 
-  <!-- start ros serial for the gripper -->
-  <node name="serial_node"        pkg="rosserial_python"      type="serial_node.py">
-  <param name="port"              type="string"               value="/dev/ttyACM0"/>
-  <param name="baud"              type="int"                  value="57600"/>
-  </node>
 
   <!-- startup simulated (rviz)world and spawn robot-->
   <group if="$(arg sim)">
     <include file="$(find my_ur3_moveit_config)/launch/demo.launch"/>
   </group>
-  <node pkg="tf2_ros" type="static_transform_publisher" name="test_broadcaster" args="0.15 0.12 0.10 0 0 0 1 world ik_testpoint" />
 
+<!--
+  <node pkg="tf2_ros" type="static_transform_publisher" name="test_broadcaster" args="0.15 0.12 0.10 0 0 0 1 world ik_testpoint" />
+-->
 </launch>

@@ -8,8 +8,8 @@
 ###########################################################
 
 from flexbe_core import Behavior, Autonomy, OperatableStateMachine, ConcurrencyContainer, PriorityContainer, Logger
-from ur3_demo_behaviors.behaivior_go_pose_ik_sm import behaivior_go_pose_ikSM
 from open_manipulator_moveit_flexbe_states.srdf_state_to_moveit import SrdfStateToMoveit as open_manipulator_moveit_flexbe_states__SrdfStateToMoveit
+from ur3_demo_behaviors.behaivior_go_pose_ik_sm import behaivior_go_pose_ikSM
 # Additional imports can be added inside the following tags
 # [MANUAL_IMPORT]
 
