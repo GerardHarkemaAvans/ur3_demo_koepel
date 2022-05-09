@@ -146,7 +146,6 @@ endeffector:
     - SPARS
     - SPARStwo
 Arm:
-  default_planner_config: RRTConnect
   planner_configs:
     - SBL
     - EST

@@ -1,16 +1,13 @@
 Panels:
   - Class: rviz/Displays
-    Help Height: 70
+    Help Height: 0
     Name: Displays
     Property Tree Widget:
       Expanded:
-        - /TF1
-        - /TF1/Tree1/world1
-        - /TF1/Tree1/world1/baseplate_link1
-        - /TF1/Tree1/world1/baseplate_link1/mountingplate_link1
-        - /TF1/Tree1/world1/baseplate_link1/mountingplate_link1/base_link1
+        - /TF1/Frames1
+        - /RobotModel1/Links1
       Splitter Ratio: 0.7425600290298462
-    Tree Height: 443
+    Tree Height: 140
   - Class: rviz/Help
     Name: Help
   - Class: rviz/Views
@@ -45,7 +42,7 @@ Visualization Manager:
       Value: true
     - Acceleration_Scaling_Factor: 1
       Class: moveit_rviz_plugin/MotionPlanning
-      Enabled: false
+      Enabled: true
       Move Group Namespace: ""
       MoveIt_Allow_Approximate_IK: false
       MoveIt_Allow_External_Program: false
@@ -76,6 +73,146 @@ Visualization Manager:
           Expand Link Details: false
           Expand Tree: false
           Link Tree Style: Links in Alphabetic Order
+          base:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          base_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          base_link_inertia:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          baseplate_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          beugel_base_position:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          beugel_camera_position:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          beugel_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          camera_bottom_screw_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_color_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_color_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_depth_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_depth_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_infra1_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_infra1_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_infra2_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_infra2_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          camera_mounting_holes:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          flange:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          forearm_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          gripper_base_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          mountingplate_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          shoulder_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          tcp:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          tcp_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          tool0:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          upper_arm_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          vacuum_tool:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          world:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          wrist_1_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          wrist_2_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          wrist_3_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
         Loop Animation: true
         Robot Alpha: 0.5
         Robot Color: 150; 50; 150
@@ -121,10 +258,150 @@ Visualization Manager:
           Expand Link Details: false
           Expand Tree: false
           Link Tree Style: Links in Alphabetic Order
+          base:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          base_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          base_link_inertia:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          baseplate_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          beugel_base_position:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          beugel_camera_position:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          beugel_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          camera_bottom_screw_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_color_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_color_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_depth_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_depth_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_infra1_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_infra1_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_infra2_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_infra2_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          camera_mounting_holes:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          flange:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          forearm_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          gripper_base_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          mountingplate_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          shoulder_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          tcp:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          tcp_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          tool0:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          upper_arm_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          vacuum_tool:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          world:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          wrist_1_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          wrist_2_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          wrist_3_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
         Robot Alpha: 0.5
         Show Robot Collision: false
         Show Robot Visual: true
-      Value: false
+      Value: true
       Velocity_Scaling_Factor: 1
     - Class: rviz/TF
       Enabled: true
@@ -165,7 +442,7 @@ Visualization Manager:
           Value: false
         camera_link:
           Value: false
-        camera_mouniting_holes:
+        camera_mounting_holes:
           Value: false
         flange:
           Value: false
@@ -176,7 +453,7 @@ Visualization Manager:
         mountingplate_link:
           Value: false
         object_to_grasp:
-          Value: false
+          Value: true
         object_to_grasp_world:
           Value: true
         shoulder_link:
@@ -184,8 +461,10 @@ Visualization Manager:
         tcp:
           Value: false
         tcp_link:
-          Value: true
+          Value: false
         tool0:
+          Value: false
+        tool0_controller:
           Value: false
         upper_arm_link:
           Value: false
@@ -199,7 +478,7 @@ Visualization Manager:
           Value: false
         wrist_3_link:
           Value: false
-      Marker Scale: 1
+      Marker Scale: 0.5
       Name: TF
       Show Arrows: true
       Show Axes: true
@@ -210,7 +489,8 @@ Visualization Manager:
             mountingplate_link:
               base_link:
                 base:
-                  {}
+                  tool0_controller:
+                    {}
                 base_link_inertia:
                   shoulder_link:
                     upper_arm_link:
@@ -223,7 +503,7 @@ Visualization Manager:
                                   beugel_base_position:
                                     beugel_link:
                                       beugel_camera_position:
-                                        camera_mouniting_holes:
+                                        camera_mounting_holes:
                                           camera_bottom_screw_frame:
                                             camera_link:
                                               camera_color_frame:
@@ -435,7 +715,7 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        camera_mouniting_holes:
+        camera_mounting_holes:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -525,25 +805,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 2.209677219390869
+      Distance: 1.506286382675171
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.11356700211763382
-        Y: 0.10592000186443329
-        Z: 2.2351800055275817e-7
+        X: 0.08455467224121094
+        Y: -0.12778350710868835
+        Z: -4.05073933507083e-7
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.22479715943336487
+      Pitch: 0.4047965705394745
       Target Frame: world
       Value: XYOrbit (rviz)
-      Yaw: 5.939941883087158
+      Yaw: 5.9449591636657715
     Saved: ~
 Window Geometry:
   Camera:
@@ -559,7 +839,7 @@ Window Geometry:
     collapsed: false
   MotionPlanning - Trajectory Slider:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd0000000100000000000002a2000003a5fc0200000008fb000000100044006900730070006c006100790073010000003d0000023e000000c900fffffffb0000000800480065006c00700000000342000000bb0000006e00fffffffb0000000a0056006900650077007300000003b0000000b0000000a400fffffffb0000000c00430061006d0065007200610100000281000001610000001600fffffffb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000001600000016fb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e0067000000017d000002650000017d00fffffffb0000000c00430061006d006500720061010000029a00000148000000000000000000000493000003a500000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000100000000000002a2000003a5fc0200000008fb000000100044006900730070006c006100790073010000003d000000c9000000c900fffffffb0000000800480065006c00700000000342000000bb0000006e00fffffffb0000000a0056006900650077007300000003b0000000b0000000a400fffffffb0000000c00430061006d006500720061010000010c0000006b0000001600fffffffb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000001600000016fb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e0067010000017d000002650000017d00fffffffb0000000c00430061006d006500720061010000029a00000148000000000000000000000493000003a500000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Views:
     collapsed: false
   Width: 1851

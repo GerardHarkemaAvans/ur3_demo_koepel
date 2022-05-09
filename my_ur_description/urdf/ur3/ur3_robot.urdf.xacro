@@ -139,17 +139,22 @@
 
   </joint>
 
- <link name="camera_mouniting_holes"/>
- <joint name="camera_mouniting_holes_to_beugel_camera_position" type="fixed">
+ <link name="camera_mounting_holes"/>
+ <joint name="camera_mounting_holes_to_beugel_camera_position" type="fixed">
     <parent link="beugel_camera_position" />
-    <child link="camera_mouniting_holes" />
+    <child link="camera_mounting_holes" />
     <origin xyz="-0.006 0.0 -0.006" rpy="0.0 0.0 0"/> <!-- deze waardes zijn nog niet geheel juist, natrekken bij mechanische tekeningen camera-->
  </joint>
 
   <!-- camera_to robot -->
-  <xacro:sensor_d435 parent="camera_mouniting_holes" use_nominal_extrinsics="true">
-    <origin xyz="0.0 0 0" rpy="0.0 0 0"/>
+  <xacro:sensor_d435 parent="camera_mounting_holes" use_nominal_extrinsics="true">
+    <origin xyz="0.011 0.000 0.000" rpy="0.0 0 0"/>
   </xacro:sensor_d435>
+
+<!--
+0.011, 0.018, 0.013
+-->
+
 
   <link name = "gripper_base_link"/>
 

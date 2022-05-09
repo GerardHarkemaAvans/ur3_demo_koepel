@@ -58,7 +58,7 @@ class pick_n_placeSM(Behavior):
 		_state_machine.userdata.move_group = "move_group"
 		_state_machine.userdata.ee_link = "end_effector_link"
 		_state_machine.userdata.frames = ["world" , "object_to_grasp_world"]
-		_state_machine.userdata.use_vacuum_gripper = False
+		_state_machine.userdata.use_vacuum_gripper = True
 		_state_machine.userdata.object_to_grasp = 'object_to_grasp'
 		_state_machine.userdata.object_to_grasp_world = 'object_to_grasp_world'
 
